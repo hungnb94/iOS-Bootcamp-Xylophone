@@ -14,6 +14,9 @@ class ViewController: UIViewController {
         super.viewDidLoad()
     }
 
+    @IBAction func redKeyPressed(_ sender: UIButton) {
+        print("Red key pressed")
+    }
 
     
 
