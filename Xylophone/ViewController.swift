@@ -16,14 +16,14 @@ class ViewController: UIViewController {
         super.viewDidLoad()
     }
 
-    @IBAction func redKeyPressed(_ sender: UIButton) {
+    @IBAction func keyPressed(_ sender: UIButton) {
         playSound()
+        print(sender.currentTitle)
     }
 
     func playSound() {
         let url = Bundle.main.url(forResource: "C", withExtension: "wav")
         player = try! AVAudioPlayer(contentsOf: url!)
-        print(player)
         player.play()
     }
 
