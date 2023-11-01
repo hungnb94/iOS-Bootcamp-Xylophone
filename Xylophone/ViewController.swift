@@ -16,8 +16,16 @@ class ViewController: UIViewController {
         super.viewDidLoad()
     }
 
+    @IBAction func keyDownPressed(_ sender: UIButton) {
+        sender.alpha = 0.5
+    }
+
     @IBAction func keyPressed(_ sender: UIButton) {
         playSound(soundName: sender.currentTitle!)
+
+        UIView.animate(withDuration: 0.2) {
+            sender.alpha = 1.0
+        }
     }
 
     func playSound(soundName: String) {
